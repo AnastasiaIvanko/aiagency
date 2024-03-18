@@ -754,7 +754,7 @@ button:hover {
   display: none;
   position: fixed; /* Сделаем окно фиксированным внутри вьюпорта */
   left: 50%;
-  top: 40%;
+  top: 50%;
   transform: translate(-50%, -5%); /* Центрирование окна */
   width: 80%; /* Адаптивная ширина */
   height: auto; /* Автоматическая высота в зависимости от контента */
@@ -798,7 +798,16 @@ button:hover {
   
   
 
-
+  @media (max-width: 768px) {
+    .modal {
+      position: fixed;
+      
+      width: 90%;
+      height: 90%;
+      overflow-y: auto;
+    }
+  }
+  
 
   /* Стили для мобильных устройств */
 @media (max-width: 768px) {
@@ -809,7 +818,7 @@ button:hover {
         margin: 5% auto; /* Уменьшаем верхний отступ для мобильных устройств */
         overflow-y: auto; /* Включает прокрутку для модального окна */ 
         height: auto; /* Автоматическая высота подстраивается под содержимое */ 
-        max-height: 90vh;  
+        max-height: 80vh;  
        
             
     }
