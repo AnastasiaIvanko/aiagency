@@ -890,7 +890,11 @@ button:hover {
 
       .modal {
         position: absolute;
-        
+        top: 0; /* Позиция от верха родительской секции */
+  left: 50%; /* Центрирование относительно родителя */
+  transform: translateX(-50%); /* Точное центрирование по горизонтали */
+
+
         width: 90%;
         height: 90%;
         overflow-y: auto;
