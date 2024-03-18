@@ -843,6 +843,9 @@ button:hover {
     overflow: auto; /* Убираем прокрутку внутри модального окна, если она не нужна */
     background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон вокруг окна */
   }
+
+
+  
   
   .modal-content {
       background-color: #fefefe;
@@ -880,6 +883,11 @@ button:hover {
     
   
     @media (max-width: 768px) {
+
+        #blog {
+            position: relative; /* Создает контекст позиционирования для дочерних абсолютно позиционированных элементов */
+          }
+
       .modal {
         position: absolute;
         
