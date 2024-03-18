@@ -42,7 +42,15 @@ document.querySelectorAll('.service h3').forEach(function(item) {
 
 
 
-
+// Функция для открытия модального окна
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+  }
+  
+  // Функция для закрытия модального окна
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+  }
  
   
 
@@ -53,16 +61,5 @@ document.querySelectorAll('.service h3').forEach(function(item) {
   };
   
 
-  // Функция для открытия модального окна
-function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  
 
-    modal.style.display = "block";
-    modal.style.top = scrollY + "px"; // Устанавливаем top в текущее положение прокрутки
-}
-
-// Функция для закрытия модального окна
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
