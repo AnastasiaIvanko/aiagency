@@ -800,7 +800,7 @@ button:hover {
 
   @media (max-width: 768px) {
     .modal {
-      position: absolute;
+      position: fixed;
       
       width: 90%;
       height: 90%;
