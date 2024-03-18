@@ -54,12 +54,7 @@ function openModal(modalId) {
  
   
 
-  window.onscroll = function() {
-    var modal = document.getElementById('yourModalId'); // Замените 'yourModalId' на ID вашего модального окна
-    var scrollY = window.scrollY || document.documentElement.scrollTop;
-    modal.style.top = scrollY + 50 + 'px'; // 50px - начальное смещение от верха, можно изменить по вашему усмотрению
-  };
-  
+ 
 
   
 
