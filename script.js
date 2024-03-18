@@ -54,7 +54,3 @@ function openModal(modalId) {
  
   
 
- 
-
-  
-
