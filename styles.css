@@ -826,3 +826,84 @@ button:hover {
 
 
   }
+
+
+
+
+   /* Стили модальных окон, аналогичные предыдущему примеру, возможно, с некоторыми адаптациями под ваш сайт */
+   .modal {
+    display: none;
+    position: fixed; /* Сделаем окно фиксированным внутри вьюпорта */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -5%); /* Центрирование окна */
+    width: 80%; /* Адаптивная ширина */
+    height: auto; /* Автоматическая высота в зависимости от контента */
+    z-index: 1000; /* Убедитесь, что модальное окно находится над другими элементами */
+    overflow: auto; /* Убираем прокрутку внутри модального окна, если она не нужна */
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон вокруг окна */
+  }
+  
+  .modal-content {
+      background-color: #fefefe;
+      margin: 0; /* Убираем внешние отступы */
+      padding: 20px;
+      border: 1px solid #888;
+      color: #333;
+      position: relative;
+      overflow-y: auto; /* Включает прокрутку для модального окна */
+      max-height: 90%; /* Максимальная высота модального контента */
+    }
+  
+  /* Центрирование изображения внутри модального окна */
+  .modal-content img {
+    display: block; /* Изображение как блочный элемент */
+    max-width: 100%; /* Максимальная ширина изображения */
+    height: auto; /* Авто высота для сохранения пропорций */
+    margin: 20px auto; /* Отступы сверху и снизу и центрирование */
+  }
+  
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      cursor: pointer;
+    }
+    
+    
+  
+    @media (max-width: 768px) {
+      .modal {
+        position: absolute;
+        
+        width: 90%;
+        height: 90%;
+        overflow-y: auto;
+      }
+    }
+    
+  
+    /* Стили для мобильных устройств */
+  @media (max-width: 768px) {
+  
+      .modal-content {
+      
+     
+          margin: 5% auto; /* Уменьшаем верхний отступ для мобильных устройств */
+          overflow-y: auto; /* Включает прокрутку для модального окна */ 
+          height: auto; /* Автоматическая высота подстраивается под содержимое */ 
+          max-height: 80vh;  
+         
+              
+      }
+          
+  
+  
+    }
