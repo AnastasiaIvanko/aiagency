@@ -42,15 +42,27 @@ document.querySelectorAll('.service h3').forEach(function(item) {
 
 
 
-// Функция для открытия модального окна
+
+ 
+  
+
+  window.onscroll = function() {
+    var modal = document.getElementById('yourModalId'); // Замените 'yourModalId' на ID вашего модального окна
+    var scrollY = window.scrollY || document.documentElement.scrollTop;
+    modal.style.top = scrollY + 50 + 'px'; // 50px - начальное смещение от верха, можно изменить по вашему усмотрению
+  };
+  
+
+  // Функция для открытия модального окна
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
     modal.style.display = "block";
-    document.body.style.overflow = 'hidden'; // Отключаем прокрутку основного контента
+    modal.style.top = scrollY + "px"; // Устанавливаем top в текущее положение прокрутки
 }
 
 // Функция для закрытия модального окна
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
-    document.body.style.overflow = ''; // Восстанавливаем прокрутку
 }
